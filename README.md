@@ -246,6 +246,13 @@ uv run pytest
 - **Every guard is mutation-tested**: each defense was removed one at a time to confirm the tests go red; the few that stay green
   are deliberate overlapping defenses, noted in the source.
 
+## Acknowledgements
+
+The isolated reader (`glovebox-reader`) builds on this idea: the side that touches untrusted content returns only a narrow format, so free text never flows back to the side that holds permissions.
+
+- Simon Willison, [The Dual LLM pattern for building AI assistants that can resist prompt injection](https://simonwillison.net/2023/Apr/25/dual-llm-pattern/) (2023)
+- Google DeepMind et al., [Defeating Prompt Injections by Design](https://arxiv.org/abs/2503.18813) (CaMeL, 2025)
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
