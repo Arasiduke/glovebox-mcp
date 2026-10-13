@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Atom test</title>
+<entry><title>ATOM-ENTRY</title><link href="https://example.com/a"/><summary>Atom summary</summary><updated>2026-10-12T00:00:00Z</updated></entry></feed>

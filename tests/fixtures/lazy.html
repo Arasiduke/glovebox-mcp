@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Lazy-load test</title></head><body><article id="feed"><h1>Lazy-load test</h1><p>This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise. This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise.</p>
+<div style="height:1500px"></div></article>
+<script>
+let n = 0;
+window.addEventListener('scroll', () => {
+  if (n >= 3) return;
+  if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 200) {
+    n += 1;
+    const s = document.createElement('section');
+    s.innerHTML = '<h2>LAZY-' + n + ' batch ' + n + '</h2><p>This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise. This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise.</p><div style="height:1500px"></div>';
+    document.getElementById('feed').appendChild(s);
+  }
+});
+</script></body></html>

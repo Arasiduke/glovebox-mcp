@@ -1,0 +1,1 @@
+{"name": "glovebox", "deps": ["mcp", "playwright"], "note": "JSON-OK 中文"}

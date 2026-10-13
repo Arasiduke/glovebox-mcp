@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Shadow DOM test</title></head><body><my-article></my-article>
+<script>
+customElements.define('my-article', class extends HTMLElement {
+  constructor() {
+    super();
+    const root = this.attachShadow({mode: 'open'});
+    root.innerHTML = '<style>.x{display:none}</style><article><h1>An article inside a component</h1>' +
+      '<p>SHADOW-VISIBLE This paragraph lives in the Shadow DOM; a plain cloneNode loses it entirely. This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise. This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise.</p>' +
+      '<p class="x">SHADOW-HIDDEN This paragraph is in the Shadow DOM and hidden.</p><h2>Section two</h2><p>This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise. This paragraph is deliberately long so the main-content extractor treats it as article text rather than navigation bars, ads or other noise.</p></article>';
+  }
+});
+</script></body></html>

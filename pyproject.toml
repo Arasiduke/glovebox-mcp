@@ -1,0 +1,36 @@
+[project]
+name = "glovebox"
+version = "0.1.0"
+description = "A browser only for Claude: the app filters and trims pages, and Claude gets only the clean result over MCP"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp",
+    "playwright==1.61.0",
+    "readability-lxml",
+    "lxml_html_clean",
+    "psutil",
+    "pypdf",
+]
+
+[project.scripts]
+glovebox = "glovebox.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/glovebox"]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "src"]
+addopts = "--doctest-modules"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

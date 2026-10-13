@@ -1,0 +1,19 @@
+# === Python ===
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# === Secrets (never commit) ===
+.env
+.env.*
+
+# === MCP registration (contains local absolute paths; template: .mcp.json.example) ===
+.mcp.json
+
+# === OS / editors ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

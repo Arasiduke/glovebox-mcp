@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "glovebox": {
+      "command": "uv",
+      "args": ["--directory", "<absolute path to glovebox>", "run", "glovebox"],
+      "env": {"GLOVEBOX_REGION": "zh-TW"}
+    }
+  }
+}

@@ -1,0 +1,4 @@
+First paragraph of plain text PLAIN-TEXT.
+
+Second paragraph
+  indentation must be kept
